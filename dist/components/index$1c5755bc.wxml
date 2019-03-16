@@ -1,0 +1,6 @@
+<template name="index$1c5755bc">
+  <view class="_div data-v-6b277275 container">
+    <i-button type="success" class="_i-button data-v-6b277275">iView-weapp按钮组件</i-button>
+    <navigator url="/pages/about/index" class="_a data-v-6b277275 counter">去往About</navigator>
+  </view>
+</template>

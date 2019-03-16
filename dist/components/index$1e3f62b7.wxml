@@ -1,0 +1,5 @@
+<template name="index$1e3f62b7">
+  <view class="_div data-v-6d0f7f70 container">
+    <i-button type="success" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_i-button data-v-6d0f7f70">这是ABOUT按钮</i-button>
+  </view>
+</template>
