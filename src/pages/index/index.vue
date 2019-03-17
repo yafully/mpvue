@@ -19,6 +19,9 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="less">
+  body{background: #ccc;}
+  .counter{
+    font-size:100rpx;color:#f00;text-decoration: underline
+  }
 </style>

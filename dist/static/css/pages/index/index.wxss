@@ -1,0 +1,9 @@
+
+page {
+  background: #ccc;
+}
+.counter {
+  font-size: 100rpx;
+  color: #f00;
+  text-decoration: underline;
+}

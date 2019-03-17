@@ -5,6 +5,7 @@ var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
 var MpvuePlugin = require('webpack-mpvue-asset-plugin')
+var CopyWebpackPlugin = require('copy-webpack-plugin')
 // var glob = require('glob')
 
 function resolve (dir) {
@@ -96,11 +97,22 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[ext]')
         }
+      },
+      {
+        test: /.less$/,
+        loader: "style-loader!css-loader!less-loader",
       }
     ]
   },
   plugins: [
     new MpvuePlugin(),
-    new MpvueEntry()
+    new MpvueEntry(),
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, '../static'),
+        to: path.resolve(__dirname, '../dist/static'),
+        ignore: ['.*']
+      }
+    ])
   ]
 }
