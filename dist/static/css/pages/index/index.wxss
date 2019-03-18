@@ -7,3 +7,33 @@ page {
   color: #f00;
   text-decoration: underline;
 }
+.swiper .slide-image {
+  width: 750rpx;
+}
+.swiper .swiper-link {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.swiper .wx-swiper-dots.wx-swiper-dots-horizontal {
+  margin-bottom: 2rpx;
+}
+.swiper .wx-swiper-dot {
+  width: 20rpx;
+  display: inline-flex;
+  height: 5rpx;
+  margin-left: 10rpx;
+  justify-content: space-between;
+}
+.swiper .wx-swiper-dot::before {
+  content: '';
+  flex-grow: 1;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8rpx;
+}
+.swiper .wx-swiper-dot-active::before {
+  background: rgba(0, 0, 0, 0.8);
+}

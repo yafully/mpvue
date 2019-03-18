@@ -1,4 +1,6 @@
 //   第一个是默认的首页
+// import MySwiper from "@/components/swiper/";
+// console.log(MySwiper)
 module.exports = [
 	{
 	  path: 'pages/index/index',
