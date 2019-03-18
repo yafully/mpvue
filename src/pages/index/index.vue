@@ -50,7 +50,7 @@ export default {
 </script>
 
 <style lang="less">
-  body{background: #ccc;}
+  //@import "../../../static/less/main.less";
   .counter{
     font-size:100rpx;color:#f00;text-decoration: underline
   }  

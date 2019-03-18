@@ -1,11 +1,15 @@
 
 page {
-  background: #ccc;
+  background: #fc0;
 }
 .counter {
   font-size: 100rpx;
   color: #f00;
   text-decoration: underline;
+}
+
+page {
+  background: #fc0;
 }
 .swiper .slide-image {
   width: 750rpx;
