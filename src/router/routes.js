@@ -9,7 +9,9 @@ module.exports = [
 	    navigationBarTitleText: '首页',
 	    enablePullDownRefresh: false,
 	    usingComponents: {
-	      'i-button': '../../iView/button/index'
+	    	"i-tab-bar": "../../iView/tab-bar/index",
+    		"i-tab-bar-item": "../../iView/tab-bar-item/index",
+	    	'i-button': '../../iView/button/index'
 	    }
 	  }
 	},
@@ -20,7 +22,9 @@ module.exports = [
 	    navigationBarTitleText: '关于我们',
 	    enablePullDownRefresh: false,
 	    usingComponents: {
-	      'i-button': '../../iView/button/index'
+	    	"i-tab-bar": "../../iView/tab-bar/index",
+			"i-tab-bar-item": "../../iView/tab-bar-item/index",
+	    	'i-button': '../../iView/button/index'
 	    }
 	  }
 	}

@@ -2,6 +2,8 @@
   "navigationBarTitleText": "关于我们",
   "enablePullDownRefresh": false,
   "usingComponents": {
+    "i-tab-bar": "../../iView/tab-bar/index",
+    "i-tab-bar-item": "../../iView/tab-bar-item/index",
     "i-button": "../../iView/button/index"
   }
 }

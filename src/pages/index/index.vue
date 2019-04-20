@@ -5,6 +5,12 @@
 
     <i-button type="success">iView-weapp按钮组件</i-button>
     <a href="/pages/about/index" class="counter">去往About</a>
+    <i-tab-bar :current="current" color="#f759ab" @change="handleChange" fixed="true">
+        <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
+        <i-tab-bar-item key="group" icon="group" current-icon="group_fill" title="朋友"></i-tab-bar-item>
+        <i-tab-bar-item key="remind" icon="remind" current-icon="remind_fill" title="通知"></i-tab-bar-item>
+        <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的"></i-tab-bar-item>
+    </i-tab-bar>
   </div>
 </template>
 
@@ -14,6 +20,7 @@ export default {
   components: { Sliders },
   data() {
     return {
+      current: 'homepage',
       bannerData: [
         {
           "id": "0001",
@@ -34,7 +41,11 @@ export default {
   },
   methods: {
     goTo(url) {
-      this.$router.push(url);
+      this.$router.push(url)
+    },
+    handleChange ({mp}) {
+      console.log(mp.detail.key)
+        
     }
   },
   mounted () {

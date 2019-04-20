@@ -1,0 +1,11 @@
+<template name="index$862673d0">
+  <view class="_div data-v-6d0f7f70 container">
+    <i-button type="success" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_i-button data-v-6d0f7f70">这是ABOUT按钮</i-button>
+    <i-tab-bar current="{{current}}" color="#f759ab" bindchange="{{handleChange}}" fixed="true" class="_i-tab-bar data-v-6d0f7f70">
+      <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页" class="_i-tab-bar-item data-v-6d0f7f70"></i-tab-bar-item>
+      <i-tab-bar-item key="group" icon="group" current-icon="group_fill" title="朋友" class="_i-tab-bar-item data-v-6d0f7f70"></i-tab-bar-item>
+      <i-tab-bar-item key="remind" icon="remind" current-icon="remind_fill" title="通知" class="_i-tab-bar-item data-v-6d0f7f70"></i-tab-bar-item>
+      <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的" class="_i-tab-bar-item data-v-6d0f7f70"></i-tab-bar-item>
+    </i-tab-bar>
+  </view>
+</template>

@@ -44,7 +44,7 @@ app.$mount();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__(46);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
@@ -99,14 +99,18 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 47:
+/***/ 46:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 //
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-  mpType: 'app'
+  mpType: 'app',
+  onLaunch: function onLaunch() {
+    wx.hideTabBar();
+  } //隐藏默认tabbar
+
 });
 
 /***/ })

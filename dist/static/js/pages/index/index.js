@@ -1,6 +1,6 @@
 global.webpackJsonp([1],{
 
-/***/ 48:
+/***/ 47:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ global.webpackJsonp([1],{
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(49)
+  __webpack_require__(48)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -54,7 +54,7 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 49:
+/***/ 48:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -76,12 +76,19 @@ if (false) {(function () {
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   components: { Sliders: __WEBPACK_IMPORTED_MODULE_0__components_swiper_index__["a" /* default */] },
   data: function data() {
     return {
+      current: 'homepage',
       bannerData: [{
         "id": "0001",
         "name": "Hot",
@@ -101,6 +108,11 @@ if (false) {(function () {
   methods: {
     goTo: function goTo(url) {
       this.$router.push(url);
+    },
+    handleChange: function handleChange(_ref) {
+      var mp = _ref.mp;
+
+      console.log(mp.detail.key);
     }
   },
   mounted: function mounted() {
@@ -309,7 +321,50 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     attrs: {
       "href": "/pages/about/index"
     }
-  }, [_vm._v("去往About")])], 1)
+  }, [_vm._v("去往About")]), _vm._v(" "), _c('i-tab-bar', {
+    attrs: {
+      "current": _vm.current,
+      "color": "#f759ab",
+      "fixed": "true",
+      "eventid": '0',
+      "mpcomid": '6'
+    },
+    on: {
+      "change": _vm.handleChange
+    }
+  }, [_c('i-tab-bar-item', {
+    key: "homepage",
+    attrs: {
+      "icon": "homepage",
+      "current-icon": "homepage_fill",
+      "title": "首页",
+      "mpcomid": '2'
+    }
+  }), _vm._v(" "), _c('i-tab-bar-item', {
+    key: "group",
+    attrs: {
+      "icon": "group",
+      "current-icon": "group_fill",
+      "title": "朋友",
+      "mpcomid": '3'
+    }
+  }), _vm._v(" "), _c('i-tab-bar-item', {
+    key: "remind",
+    attrs: {
+      "icon": "remind",
+      "current-icon": "remind_fill",
+      "title": "通知",
+      "mpcomid": '4'
+    }
+  }), _vm._v(" "), _c('i-tab-bar-item', {
+    key: "mine",
+    attrs: {
+      "icon": "mine",
+      "current-icon": "mine_fill",
+      "title": "我的",
+      "mpcomid": '5'
+    }
+  })], 1)], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -324,5 +379,5 @@ if (false) {
 
 /***/ })
 
-},[62]);
+},[60]);
 //# sourceMappingURL=index.js.map

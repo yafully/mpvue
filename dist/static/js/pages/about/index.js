@@ -77,11 +77,18 @@ if (false) {(function () {
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
-    return {};
+    return {
+      current: 'group'
+    };
   },
 
   methods: {
@@ -111,7 +118,47 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
         _vm.goTo('/pages/index/index')
       }
     }
-  }, [_vm._v("这是ABOUT按钮")])], 1)
+  }, [_vm._v("这是ABOUT按钮")]), _vm._v(" "), _c('i-tab-bar', {
+    attrs: {
+      "current": _vm.current,
+      "color": "#f759ab",
+      "bindchange": _vm.handleChange,
+      "fixed": "true",
+      "mpcomid": '5'
+    }
+  }, [_c('i-tab-bar-item', {
+    key: "homepage",
+    attrs: {
+      "icon": "homepage",
+      "current-icon": "homepage_fill",
+      "title": "首页",
+      "mpcomid": '1'
+    }
+  }), _vm._v(" "), _c('i-tab-bar-item', {
+    key: "group",
+    attrs: {
+      "icon": "group",
+      "current-icon": "group_fill",
+      "title": "朋友",
+      "mpcomid": '2'
+    }
+  }), _vm._v(" "), _c('i-tab-bar-item', {
+    key: "remind",
+    attrs: {
+      "icon": "remind",
+      "current-icon": "remind_fill",
+      "title": "通知",
+      "mpcomid": '3'
+    }
+  }), _vm._v(" "), _c('i-tab-bar-item', {
+    key: "mine",
+    attrs: {
+      "icon": "mine",
+      "current-icon": "mine_fill",
+      "title": "我的",
+      "mpcomid": '4'
+    }
+  })], 1)], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
