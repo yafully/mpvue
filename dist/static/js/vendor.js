@@ -6445,10 +6445,7 @@ module.exports = g;
 /***/ }),
 /* 44 */,
 /* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */
+/* 46 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6483,6 +6480,9 @@ function listToStyles (parentId, list) {
 
 
 /***/ }),
+/* 47 */,
+/* 48 */,
+/* 49 */,
 /* 50 */,
 /* 51 */,
 /* 52 */,
@@ -6494,42 +6494,6 @@ function listToStyles (parentId, list) {
 /* 58 */,
 /* 59 */,
 /* 60 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_index_index__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_mpvue_router_patch__ = __webpack_require__(8);
-
-
-
-
-__WEBPACK_IMPORTED_MODULE_1_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_3_mpvue_router_patch__["a" /* default */]);
-
-__WEBPACK_IMPORTED_MODULE_1_vue___default.a.config.productionTip = false;
-
-var app = new __WEBPACK_IMPORTED_MODULE_1_vue___default.a(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, __WEBPACK_IMPORTED_MODULE_2__pages_index_index__["a" /* default */]));
-
-app.$mount();
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  "config": {
-    "navigationBarTitleText": "首页",
-    "enablePullDownRefresh": false,
-    "usingComponents": {
-      "i-tab-bar": "../../iView/tab-bar/index",
-      "i-tab-bar-item": "../../iView/tab-bar-item/index",
-      "i-button": "../../iView/button/index"
-    }
-  }
-});
-
-/***/ }),
-/* 61 */
 /***/ (function(module, exports) {
 
 /*
@@ -6611,13 +6575,13 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 62 */
+/* 61 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (immutable) */ __webpack_exports__["default"] = addStylesClient;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__listToStyles__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__listToStyles__ = __webpack_require__(46);
 /*
   MIT License http://www.opensource.org/licenses/mit-license.php
   Author Tobias Koppers @sokra
@@ -6843,6 +6807,40 @@ function applyToTag (styleElement, obj) {
 
 
 /***/ }),
+/* 62 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_index_index__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_mpvue_router_patch__ = __webpack_require__(8);
+
+
+
+
+__WEBPACK_IMPORTED_MODULE_1_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_3_mpvue_router_patch__["a" /* default */]);
+
+__WEBPACK_IMPORTED_MODULE_1_vue___default.a.config.productionTip = false;
+
+var app = new __WEBPACK_IMPORTED_MODULE_1_vue___default.a(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, __WEBPACK_IMPORTED_MODULE_2__pages_index_index__["a" /* default */]));
+
+app.$mount();
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  "config": {
+    "navigationBarTitleText": "首页",
+    "enablePullDownRefresh": false,
+    "usingComponents": {
+      "i-button": "../../iView/button/index"
+    }
+  }
+});
+
+/***/ }),
 /* 63 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -6868,12 +6866,13 @@ app.$mount();
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   "config": {
-    "navigationBarTitleText": "关于我们",
+    "navigationBarTitleText": "新闻列表",
     "enablePullDownRefresh": false,
     "usingComponents": {
-      "i-tab-bar": "../../iView/tab-bar/index",
-      "i-tab-bar-item": "../../iView/tab-bar-item/index",
-      "i-button": "../../iView/button/index"
+      "i-button": "../../iView/button/index",
+      "i-cell-group": "../../iView/cell-group/index",
+      "i-cell": "../../iView/cell/index",
+      "i-page": "../../iView/page/index"
     }
   }
 });

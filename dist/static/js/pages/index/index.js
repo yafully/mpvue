@@ -1,6 +1,6 @@
 global.webpackJsonp([1],{
 
-/***/ 47:
+/***/ 48:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ global.webpackJsonp([1],{
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(48)
+  __webpack_require__(49)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -54,7 +54,7 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 48:
+/***/ 49:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -107,12 +107,14 @@ if (false) {(function () {
   computed: {},
   methods: {
     goTo: function goTo(url) {
+      console.log(url);
       this.$router.push(url);
     },
     handleChange: function handleChange(_ref) {
       var mp = _ref.mp;
 
-      console.log(mp.detail.key);
+      var url = '/pages/' + mp.detail.key + '/index';
+      this.$router.push(url);
     }
   },
   mounted: function mounted() {
@@ -319,52 +321,15 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   }, [_vm._v("iView-weapp按钮组件")]), _vm._v(" "), _c('a', {
     staticClass: "counter",
     attrs: {
-      "href": "/pages/about/index"
-    }
-  }, [_vm._v("去往About")]), _vm._v(" "), _c('i-tab-bar', {
-    attrs: {
-      "current": _vm.current,
-      "color": "#f759ab",
-      "fixed": "true",
-      "eventid": '0',
-      "mpcomid": '6'
+      "href": "/pages/about/index",
+      "eventid": '0'
     },
     on: {
-      "change": _vm.handleChange
+      "click": function($event) {
+        _vm.goTo('/pages/about/index')
+      }
     }
-  }, [_c('i-tab-bar-item', {
-    key: "homepage",
-    attrs: {
-      "icon": "homepage",
-      "current-icon": "homepage_fill",
-      "title": "首页",
-      "mpcomid": '2'
-    }
-  }), _vm._v(" "), _c('i-tab-bar-item', {
-    key: "group",
-    attrs: {
-      "icon": "group",
-      "current-icon": "group_fill",
-      "title": "朋友",
-      "mpcomid": '3'
-    }
-  }), _vm._v(" "), _c('i-tab-bar-item', {
-    key: "remind",
-    attrs: {
-      "icon": "remind",
-      "current-icon": "remind_fill",
-      "title": "通知",
-      "mpcomid": '4'
-    }
-  }), _vm._v(" "), _c('i-tab-bar-item', {
-    key: "mine",
-    attrs: {
-      "icon": "mine",
-      "current-icon": "mine_fill",
-      "title": "我的",
-      "mpcomid": '5'
-    }
-  })], 1)], 1)
+  }, [_vm._v("去往About")])], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -379,5 +344,5 @@ if (false) {
 
 /***/ })
 
-},[60]);
+},[62]);
 //# sourceMappingURL=index.js.map

@@ -3,12 +3,6 @@
   <view class="_div data-v-6b277275 container">
     <template data="{{...$root[$kk+'0'], $root}}" is="index$416ebda1"></template>
     <i-button type="success" class="_i-button data-v-6b277275">iView-weapp按钮组件</i-button>
-    <navigator url="/pages/about/index" class="_a data-v-6b277275 counter">去往About</navigator>
-    <i-tab-bar current="{{current}}" color="#f759ab" bindchange="handleProxy" fixed="true" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_i-tab-bar data-v-6b277275">
-      <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页" class="_i-tab-bar-item data-v-6b277275"></i-tab-bar-item>
-      <i-tab-bar-item key="group" icon="group" current-icon="group_fill" title="朋友" class="_i-tab-bar-item data-v-6b277275"></i-tab-bar-item>
-      <i-tab-bar-item key="remind" icon="remind" current-icon="remind_fill" title="通知" class="_i-tab-bar-item data-v-6b277275"></i-tab-bar-item>
-      <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的" class="_i-tab-bar-item data-v-6b277275"></i-tab-bar-item>
-    </i-tab-bar>
+    <navigator url="/pages/about/index" class="_a data-v-6b277275 counter" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">去往About</navigator>
   </view>
 </template>

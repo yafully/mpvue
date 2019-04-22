@@ -9,8 +9,8 @@ module.exports = [
 	    navigationBarTitleText: '首页',
 	    enablePullDownRefresh: false,
 	    usingComponents: {
-	    	"i-tab-bar": "../../iView/tab-bar/index",
-    		"i-tab-bar-item": "../../iView/tab-bar-item/index",
+	    	// "i-tab-bar": "../../iView/tab-bar/index",
+    		// "i-tab-bar-item": "../../iView/tab-bar-item/index",
 	    	'i-button': '../../iView/button/index'
 	    }
 	  }
@@ -19,12 +19,15 @@ module.exports = [
 	  path: 'pages/about/index',
 	  name: 'about',
 	  config: {
-	    navigationBarTitleText: '关于我们',
+	    navigationBarTitleText: '新闻列表',
 	    enablePullDownRefresh: false,
 	    usingComponents: {
-	    	"i-tab-bar": "../../iView/tab-bar/index",
-			"i-tab-bar-item": "../../iView/tab-bar-item/index",
-	    	'i-button': '../../iView/button/index'
+	  //   	"i-tab-bar": "../../iView/tab-bar/index",
+			// "i-tab-bar-item": "../../iView/tab-bar-item/index",
+	    	'i-button': '../../iView/button/index',
+	    	"i-cell-group": "../../iView/cell-group/index",
+    		"i-cell": "../../iView/cell/index",
+    		"i-page": "../../iView/page/index"
 	    }
 	  }
 	}

@@ -1,11 +1,14 @@
 <template name="index$862673d0">
   <view class="_div data-v-6d0f7f70 container">
-    <i-button type="success" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_i-button data-v-6d0f7f70">这是ABOUT按钮</i-button>
-    <i-tab-bar current="{{current}}" color="#f759ab" bindchange="{{handleChange}}" fixed="true" class="_i-tab-bar data-v-6d0f7f70">
-      <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页" class="_i-tab-bar-item data-v-6d0f7f70"></i-tab-bar-item>
-      <i-tab-bar-item key="group" icon="group" current-icon="group_fill" title="朋友" class="_i-tab-bar-item data-v-6d0f7f70"></i-tab-bar-item>
-      <i-tab-bar-item key="remind" icon="remind" current-icon="remind_fill" title="通知" class="_i-tab-bar-item data-v-6d0f7f70"></i-tab-bar-item>
-      <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的" class="_i-tab-bar-item data-v-6d0f7f70"></i-tab-bar-item>
-    </i-tab-bar>
+    <i-cell-group class="_i-cell-group data-v-6d0f7f70">
+      <i-cell wx:key="item.aid" key="{{item.aid}}" title="{{item.title}}" is-link url="/pages/index/index" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" class="_i-cell data-v-6d0f7f70"></i-cell>
+    </i-cell-group>
+    <i-page current="{{pageCurrent}}" total="{{pageTotal}}" bindchange="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_i-page data-v-6d0f7f70">
+      <view slot="prev" class="_view data-v-6d0f7f70">
+        <i-icon type="return" class="_i-icon data-v-6d0f7f70"></i-icon> 上一步 </view>
+      <view slot="next" class="_view data-v-6d0f7f70"> 下一步
+        <i-icon type="enter" class="_i-icon data-v-6d0f7f70"></i-icon>
+      </view>
+    </i-page>
   </view>
 </template>

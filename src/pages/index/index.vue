@@ -4,13 +4,13 @@
     <sliders :images="bannerData" :height="bannerHeight" :interval="5000"></sliders>
 
     <i-button type="success">iView-weapp按钮组件</i-button>
-    <a href="/pages/about/index" class="counter">去往About</a>
-    <i-tab-bar :current="current" color="#f759ab" @change="handleChange" fixed="true">
-        <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
-        <i-tab-bar-item key="group" icon="group" current-icon="group_fill" title="朋友"></i-tab-bar-item>
+    <a href="/pages/about/index" class="counter" @click="goTo('/pages/about/index')">去往About</a>
+<!--     <i-tab-bar :current="current" color="#f759ab" @change="handleChange" fixed="true">
+        <i-tab-bar-item key="index" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
+        <i-tab-bar-item key="about" icon="group" current-icon="group_fill" title="关于我们"></i-tab-bar-item>
         <i-tab-bar-item key="remind" icon="remind" current-icon="remind_fill" title="通知"></i-tab-bar-item>
         <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的"></i-tab-bar-item>
-    </i-tab-bar>
+    </i-tab-bar> -->
   </div>
 </template>
 
@@ -41,11 +41,12 @@ export default {
   },
   methods: {
     goTo(url) {
+      console.log(url)
       this.$router.push(url)
     },
     handleChange ({mp}) {
-      console.log(mp.detail.key)
-        
+      let url = '/pages/' + mp.detail.key + '/index'
+      this.$router.push(url)
     }
   },
   mounted () {

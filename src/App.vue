@@ -1,10 +1,11 @@
 <!-- App.vue中，是不能够写template的，不会编译 -->
 <script>
 export default {
-  mpType: 'app',
-  onLaunch() {
-    wx.hideTabBar();
-  }//隐藏默认tabbar
+  mpType: 'app'
+  //,
+  //onLaunch() {
+    //wx.hideTabBar();
+  //}//隐藏默认tabbar
 }
 </script>
 

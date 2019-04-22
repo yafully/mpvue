@@ -82,19 +82,81 @@ if (false) {(function () {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
     return {
-      current: 'group'
+      pageCurrent: 1,
+      pageTotal: 5,
+      current: 'group',
+      list: []
     };
   },
 
+  // computed: {
+  //   strtit: function (t) {
+  //     return t.length > 15 ? t.substr(0, 3)+'...' : t
+  //   } 
+  // },
   methods: {
     goTo: function goTo(url) {
       this.$router.push(url);
+    },
+    handleChange: function handleChange(_ref) {
+      var mp = _ref.mp;
+
+      var url = '/pages/' + mp.detail.key + '/index';
+      this.$router.push(url);
+    },
+    pageChange: function pageChange(_ref2) {
+      var mp = _ref2.mp;
+
+      var type = mp.detail.type;
+      if (type === 'next') {
+        this.pageCurrent = this.pageCurrent + 1;
+      } else if (type === 'prev') {
+        this.pageCurrent = this.pageCurrent - 1;
+      }
+      this.getData();
+    },
+    getData: function getData() {
+      var self = this;
+      var api = 'http://www.phonegap100.com/appapi.php';
+
+      wx.request({
+        url: api, //仅为示例，并非真实的接口地址
+        data: {
+          a: 'getPortalList',
+          catid: '20',
+          page: this.pageCurrent
+        },
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        success: function success(res) {
+          self.list = res.data.result;
+          //console.log(self.list)
+        }
+      });
     }
+  },
+  mounted: function mounted() {
+    this.getData();
   }
 });
 
@@ -107,58 +169,45 @@ if (false) {(function () {
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "container"
-  }, [_c('i-button', {
+  }, [_c('i-cell-group', {
     attrs: {
-      "type": "success",
-      "eventid": '0',
-      "mpcomid": '0'
-    },
-    on: {
-      "click": function($event) {
-        _vm.goTo('/pages/index/index')
-      }
-    }
-  }, [_vm._v("这是ABOUT按钮")]), _vm._v(" "), _c('i-tab-bar', {
-    attrs: {
-      "current": _vm.current,
-      "color": "#f759ab",
-      "bindchange": _vm.handleChange,
-      "fixed": "true",
-      "mpcomid": '5'
-    }
-  }, [_c('i-tab-bar-item', {
-    key: "homepage",
-    attrs: {
-      "icon": "homepage",
-      "current-icon": "homepage_fill",
-      "title": "首页",
       "mpcomid": '1'
     }
-  }), _vm._v(" "), _c('i-tab-bar-item', {
-    key: "group",
+  }, _vm._l((_vm.list), function(item, index) {
+    return _c('i-cell', {
+      key: item.aid,
+      attrs: {
+        "title": item.title,
+        "is-link": "",
+        "url": "/pages/index/index",
+        "mpcomid": '0-' + index
+      }
+    })
+  })), _vm._v(" "), _c('i-page', {
     attrs: {
-      "icon": "group",
-      "current-icon": "group_fill",
-      "title": "朋友",
+      "current": _vm.pageCurrent,
+      "total": _vm.pageTotal,
+      "eventid": '0',
+      "mpcomid": '4'
+    },
+    on: {
+      "change": _vm.pageChange
+    }
+  }, [_c('view', {
+    slot: "prev"
+  }, [_c('i-icon', {
+    attrs: {
+      "type": "return",
       "mpcomid": '2'
     }
-  }), _vm._v(" "), _c('i-tab-bar-item', {
-    key: "remind",
+  }), _vm._v("\n          上一步\n      ")], 1), _vm._v(" "), _c('view', {
+    slot: "next"
+  }, [_vm._v("\n          下一步\n          "), _c('i-icon', {
     attrs: {
-      "icon": "remind",
-      "current-icon": "remind_fill",
-      "title": "通知",
+      "type": "enter",
       "mpcomid": '3'
     }
-  }), _vm._v(" "), _c('i-tab-bar-item', {
-    key: "mine",
-    attrs: {
-      "icon": "mine",
-      "current-icon": "mine_fill",
-      "title": "我的",
-      "mpcomid": '4'
-    }
-  })], 1)], 1)
+  })], 1)])], 1)
 }
 var staticRenderFns = []
 render._withStripped = true

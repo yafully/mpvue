@@ -34,6 +34,22 @@ app.$mount();
       navigationBarTitleText: 'mpvue demo',
       navigationBarTextStyle: 'black',
       enablePullDownRefresh: true
+    },
+
+    "tabBar": {
+      color: "blue",
+      selectedColor: 'red',
+      "list": [{
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/images/home1.png",
+        "selectedIconPath": "static/images/home2.png"
+      }, {
+        "pagePath": "pages/about/index",
+        "text": "新闻",
+        "iconPath": "static/images/news1.png",
+        "selectedIconPath": "static/images/news2.png"
+      }]
     }
   }
 });
@@ -44,7 +60,7 @@ app.$mount();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_App_vue__ = __webpack_require__(47);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
@@ -99,18 +115,18 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 46:
+/***/ 47:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 //
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-  mpType: 'app',
-  onLaunch: function onLaunch() {
-    wx.hideTabBar();
-  } //隐藏默认tabbar
-
+  mpType: 'app'
+  //,
+  //onLaunch() {
+  //wx.hideTabBar();
+  //}//隐藏默认tabbar
 });
 
 /***/ })
