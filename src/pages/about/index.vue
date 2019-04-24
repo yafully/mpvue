@@ -13,7 +13,7 @@
         <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的"></i-tab-bar-item>
     </i-tab-bar> -->
     <i-cell-group>
-      <i-cell v-for="item in list" :key="item.aid" :title="item.title" is-link url="/pages/index/index"></i-cell>
+      <i-cell v-for="item in list" :key="item.aid" :title="item.title" is-link :url="'/pages/about_detail/index?aid='+item.aid"></i-cell>
     </i-cell-group>
 
     <i-page :current="pageCurrent" :total="pageTotal" @change="pageChange">

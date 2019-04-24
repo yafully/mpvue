@@ -4,7 +4,8 @@
     <sliders :images="bannerData" :height="bannerHeight" :interval="5000"></sliders>
 
     <i-button type="success">iView-weapp按钮组件</i-button>
-    <a href="/pages/about/index" class="counter" @click="goTo('/pages/about/index')">去往About</a>
+    <a href="/pages/about_detail/index" class="counter">去往About</a>
+    <navigator url="/pages/about/index" open-type="switchTab" delta="1">跳转tabBar</navigator>
 <!--     <i-tab-bar :current="current" color="#f759ab" @change="handleChange" fixed="true">
         <i-tab-bar-item key="index" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
         <i-tab-bar-item key="about" icon="group" current-icon="group_fill" title="关于我们"></i-tab-bar-item>
@@ -41,8 +42,13 @@ export default {
   },
   methods: {
     goTo(url) {
-      console.log(url)
-      this.$router.push(url)
+      // console.log(url)
+
+      // this.$router.push(url)
+      
+      wx.navigateTo({
+        url: '/pages/about/index'
+      })
     },
     handleChange ({mp}) {
       let url = '/pages/' + mp.detail.key + '/index'

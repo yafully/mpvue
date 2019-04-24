@@ -1,4 +1,4 @@
-global.webpackJsonp([2],{
+global.webpackJsonp([3],{
 
 /***/ 56:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -179,7 +179,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       attrs: {
         "title": item.title,
         "is-link": "",
-        "url": "/pages/index/index",
+        "url": '/pages/about_detail/index?aid=' + item.aid,
         "mpcomid": '0-' + index
       }
     })
@@ -222,5 +222,5 @@ if (false) {
 
 /***/ })
 
-},[63]);
+},[67]);
 //# sourceMappingURL=index.js.map

@@ -1,0 +1,11 @@
+<import src="wxParse$0f7789ff" />
+<template name="index$ac50f198">
+  <view class="_div data-v-c98582d4">
+    <i-panel title="{{detail.title}}" class="_i-panel data-v-c98582d4">
+      <view style="padding: 10rpx;" class="_view data-v-c98582d4">
+        <template data="{{...$root[$kk+'0'], $root}}" is="wxParse$0f7789ff"></template>
+        <i-spin size="large" fix wx:if="{{spinShow}}" class="_i-spin data-v-c98582d4"></i-spin>
+      </view>
+    </i-panel>
+  </view>
+</template>

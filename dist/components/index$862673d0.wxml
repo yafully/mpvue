@@ -1,7 +1,7 @@
 <template name="index$862673d0">
   <view class="_div data-v-6d0f7f70 container">
     <i-cell-group class="_i-cell-group data-v-6d0f7f70">
-      <i-cell wx:key="item.aid" key="{{item.aid}}" title="{{item.title}}" is-link url="/pages/index/index" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" class="_i-cell data-v-6d0f7f70"></i-cell>
+      <i-cell wx:key="item.aid" key="{{item.aid}}" title="{{item.title}}" is-link url="{{'/pages/about_detail/index?aid='+item.aid}}" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" class="_i-cell data-v-6d0f7f70"></i-cell>
     </i-cell-group>
     <i-page current="{{pageCurrent}}" total="{{pageTotal}}" bindchange="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_i-page data-v-6d0f7f70">
       <view slot="prev" class="_view data-v-6d0f7f70">

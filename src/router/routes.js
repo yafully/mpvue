@@ -30,5 +30,19 @@ module.exports = [
     		"i-page": "../../iView/page/index"
 	    }
 	  }
+	},
+	{
+	  path: 'pages/about_detail/index',
+	  name: 'about_detail',
+	  config: {
+	    navigationBarTitleText: '新闻详情',
+	    enablePullDownRefresh: false,
+	    usingComponents: {
+	  //   	"i-tab-bar": "../../iView/tab-bar/index",
+			// "i-tab-bar-item": "../../iView/tab-bar-item/index",
+	    	"i-panel": "../../iView/panel/index",
+	    	"i-spin": "../../iView/spin/index"
+	    }
+	  }
 	}
 ]

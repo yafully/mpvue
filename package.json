@@ -13,7 +13,8 @@
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "mpvue": "^1.0.11",
-    "mpvue-router-patch": "^0.2.1"
+    "mpvue-router-patch": "^0.2.1",
+    "mpvue-wxparse": "^0.6.5"
   },
   "devDependencies": {
     "babel-core": "^6.22.1",

@@ -82,6 +82,7 @@ if (false) {(function () {
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
@@ -107,8 +108,13 @@ if (false) {(function () {
   computed: {},
   methods: {
     goTo: function goTo(url) {
-      console.log(url);
-      this.$router.push(url);
+      // console.log(url)
+
+      // this.$router.push(url)
+
+      wx.navigateTo({
+        url: '/pages/about/index'
+      });
     },
     handleChange: function handleChange(_ref) {
       var mp = _ref.mp;
@@ -321,15 +327,15 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   }, [_vm._v("iView-weapp按钮组件")]), _vm._v(" "), _c('a', {
     staticClass: "counter",
     attrs: {
-      "href": "/pages/about/index",
-      "eventid": '0'
-    },
-    on: {
-      "click": function($event) {
-        _vm.goTo('/pages/about/index')
-      }
+      "href": "/pages/about_detail/index"
     }
-  }, [_vm._v("去往About")])], 1)
+  }, [_vm._v("去往About")]), _vm._v(" "), _c('navigator', {
+    attrs: {
+      "url": "/pages/about/index",
+      "open-type": "switchTab",
+      "delta": "1"
+    }
+  }, [_vm._v("跳转tabBar")])], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -344,5 +350,5 @@ if (false) {
 
 /***/ })
 
-},[62]);
+},[66]);
 //# sourceMappingURL=index.js.map
